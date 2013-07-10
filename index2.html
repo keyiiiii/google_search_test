@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>無題ドキュメント</title>
+<script type="text/javascript">
+function searchInSite(F) {
+	var DOMAIN = F.site.value;
+	console.log(DOMAIN);
+	F.q.value = 'site:' + DOMAIN + " " + F.q.value;
+}
+</script>
+</head>
+
+<body>
+
+
+<form onSubmit="searchInSite(this)" action="http://www.google.co.jp/search">
+サイトを設定：http://<input type="text" name="site"><br>
+<input type="hidden" name="hl" value="ja">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+キーワードを設定：<input type="text" name="q" size="31">
+<input type="submit" value="検索">
+</form>
+</body>
+</html>
